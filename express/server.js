@@ -15,11 +15,12 @@ app.set('view engine', 'ejs');
 app.use(express.static('src'));
 
 app.get('/query',(req, res)=>{
-    api.callSearch(req.query,ssSessionIdNamespace,ssUserId,ssPageLoad)
-        .then( result => {
-            res.json(result.data)
-        })
-        .catch( err => res.json({err}) )
+    res.json({message: "api is working"})
+    // api.callSearch(req.query,ssSessionIdNamespace,ssUserId,ssPageLoad)
+    //     .then( result => {
+    //         res.json(result.data)
+    //     })
+    //     .catch( err => res.json({err}) )
 })
 
 app.get('/*',(req, res)=>{
