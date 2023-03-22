@@ -148,10 +148,10 @@ function updatePagination(pagination){
         })
     })
     //show or hide buttons depending on page
-    document.getElementById("prev-btn1").style.display = (current == 1)? "none":"block";
-    document.getElementById("next-btn1").style.display = (current == total)? "none":"block";
-    document.getElementById("prev-btn2").style.display = (current == 1)? "none":"block";
-    document.getElementById("next-btn2").style.display = (current == total)? "none":"block";
+    document.getElementById("prev-btn1").style.display = (current == 1 || total == 0)? "none":"block";
+    document.getElementById("next-btn1").style.display = (current == total || total == 0)? "none":"block";
+    document.getElementById("prev-btn2").style.display = (current == 1 || total == 0)? "none":"block";
+    document.getElementById("next-btn2").style.display = (current == total || total == 0)? "none":"block";
 }
 
 function createProductsHtml(data = []){
