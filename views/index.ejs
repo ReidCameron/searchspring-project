@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <script src="script.js" defer></script>
+    
+
+    <title>SearchPage</title>
+</head>
+<body>
+    <header>
+        <div id="header-row">
+            <h1 id="store-title">Shopalot</h1>
+            <div id="search-bar">
+                <input type="search" placeholder="What would you like to see?" id="search-input" name="search">
+                <button type="submit" id="search-button">Search</button>
+            </div>
+            <div id="header-btns">
+                <button id="profile-button">
+                    <img alt="" src="./assets/pfp-icon.png">
+                    <label>Guest</label>
+                </button>
+                <button id="cart-button">
+                    <img src="./assets/cart-icon.png">
+                    <label alt="" id="cart-total">0</label>
+                </button>
+            </div>
+        </div>
+        <nav id="navbar">
+            <ul id="navlist">
+                <li><button class="nav-link" value="Tops">Tops</button></li>
+                <li><button class="nav-link" value="Jeans">Jeans</button></li>
+                <li><button class="nav-link" value="Dresses">Dresses</button></li>
+                <li><button class="nav-link" value="Shoes">Shoes</button></li>
+                <li><button class="nav-link" value="Handbags">Handbags</button></li>
+                <li><button class="nav-link" value="Leggings">Leggings</button></li>
+                <li><button class="nav-link" value="Shorts">Shorts</button></li>
+                <li><button class="nav-link" value="Skirts">Skirts</button></li>
+                <li><button class="nav-link" value="Hats">Hats</button></li>
+                <li><button class="nav-link" value="">All Products</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="main-content">
+            <h1 id="search-term-h1">Searching for <label id="search-term">all products</label></h1>
+            <div id="main-div">
+                <aside id="sidebar">
+                    <div id="promo-bar">
+                        <h1 id="promo-text">Spring Sale!</h1>
+                        <button id="promo-button" value="Spring Sale">Shop Now</button>
+                    </div>
+                </aside>
+                <section id="results-containter">
+                    <div id="results-header">
+                        <div id="row-1">
+                            <h2>SHOWING <label id="visible-results">0</label> of <label id="total-results">0</label> RESULTS</h2>
+                            <div id="pagination-container">
+                                <button class="prev-btn" id="prev-btn1">&lt;</button>
+                                <div id="page-labels1"></div>
+                                <button class="next-btn" id="next-btn1">&gt;</button>
+                            </div>
+                        </div>
+                        <div id="row-2">
+                            <form id="sort-form">
+                                <label>Results Per Page: </label>
+                                <label>24<input class="rpp-radio" name="rpp-radio" type="radio" value="24" checked="checked"></label>
+                                <label>48<input class="rpp-radio" name="rpp-radio" type="radio" value="48"></label>
+                                <label>72<input class="rpp-radio" name="rpp-radio" type="radio" value="72"></label>
+                            </form>
+                            <div id="sort-group">
+                                <label>Sort By: </label>
+                                <select id="sort-dropdown" name="pets">
+                                    <option value="">Best Match</option>
+                                    <option value='{"sort.price": "asc"}'>Price ($ - $$$)</option>
+                                    <option value='{"sort.price": "desc"}'>Price ($$$ - $)</option>
+                                    <option value='{"sort.title": "asc"}'>Name A - Z</option>
+                                    <option value='{"sort.title": "desc"}'>Name Z - A</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="results"></div>
+                    <div id="pagination-container2">
+                        <button class="prev-btn" id="prev-btn2">&lt;</button>
+                        <div id="page-labels2"></div>
+                        <button class="next-btn" id="next-btn2">&gt;</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
