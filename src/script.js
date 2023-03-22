@@ -97,7 +97,7 @@ async function search() {
 async function callAPISearch(params){
     //call api and return product data only
     let result = await $.ajax({
-        url: `https://searchspring-reidcj.netlify.app/query`,
+        url: `https://searchspring-reidcj.netlify.app/.netlify/functions/server/api/query`,
         type: 'GET',
         data: params,
     })

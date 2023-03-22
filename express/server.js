@@ -5,6 +5,7 @@ const path = require('path')
 const api = require('./ssApi')
 const { v4: uuidv4 } = require('uuid');
 
+const baseURL = '/.netlify/functions/server/api';
 //ids
 const ssSessionIdNamespace = uuidv4();
 const ssUserId = uuidv4();
@@ -14,13 +15,12 @@ let ssPageLoad = uuidv4();;
 app.set('view engine', 'ejs');
 app.use(express.static('src'));
 
-app.get('/query',(req, res)=>{
-    res.json({message: "api is working"})
-    // api.callSearch(req.query,ssSessionIdNamespace,ssUserId,ssPageLoad)
-    //     .then( result => {
-    //         res.json(result.data)
-    //     })
-    //     .catch( err => res.json({err}) )
+app.get(`${baseURL}/query`,(req, res)=>{
+    api.callSearch(req.query,ssSessionIdNamespace,ssUserId,ssPageLoad)
+        .then( result => {
+            res.json(result.data)
+        })
+        .catch( err => res.json({err}) )
 })
 
 app.get('/*',(req, res)=>{
