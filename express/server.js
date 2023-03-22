@@ -28,12 +28,12 @@ app.get('/*',(req, res)=>{
     res.sendFile(path.join(__dirname, "../src/index.html"))
 })
 
-//local server
+// //local server
 // app.listen(3000, ()=>{
 //     console.log("server is running on port 3000");
 // })
 
-serverless
+// serverless
 const handler = serverless(app);
 module.exports.handler = async (event, context) => {
     return await handler(event, context);

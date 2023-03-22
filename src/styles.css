@@ -45,8 +45,8 @@ main{
     /* padding-right: 10%; */
 }
 #main-content{
-    margin-left: clamp(50px,12%,200px);
-    margin-right: clamp(50px,12%,200px);
+    margin-left: clamp(50px,10%,150px);
+    margin-right: clamp(50px,10%,150px);
     /* width: 100%; */
     flex:1;
 }
