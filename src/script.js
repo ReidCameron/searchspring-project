@@ -133,12 +133,18 @@ function updatePagination(pagination){
         insertHTML += `<label class="page-label">…</label>\n`
     }
     //last
-    currentPage = (total == current)? "currentPage":"";
-    insertHTML += `<button class="page-bts ${currentPage}">${total}</button>\n`
+    if(total > 1){
+        currentPage = (total == current)? "currentPage":"";
+        insertHTML += `<button class="page-bts ${currentPage}">${total}</button>\n`
+    }
+    
     
     //insert html
-    pagination_div.innerHTML = insertHTML;
-    pagination_div2.innerHTML = insertHTML;
+    if(total > 0){
+        pagination_div.innerHTML = insertHTML;
+        pagination_div2.innerHTML = insertHTML;
+    }
+    
 
     //add event listeners to buttons
     document.querySelectorAll(".page-bts").forEach( (btn,i) => {
