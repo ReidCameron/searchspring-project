@@ -249,6 +249,9 @@ main h1{
         justify-content: right;
         margin-right: 10px;
     }
+    #store-title{
+        padding: 0;
+    }
   }
 
 #promo-bar{
